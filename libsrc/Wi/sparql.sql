@@ -6189,7 +6189,7 @@ create procedure DB.DBA.SPARQL_RESULTS_CSV_WRITE_VALUE (inout _env any, in val a
     }
   if (t in (__tag of integer, __tag of numeric, __tag of double precision, __tag of float, __tag of date, __tag of time, __tag of datetime, __tag of real))
     {
-      http_value (__rdf_strsqlval (val), 0, _env);
+      http_value (val, 0, _env);
       return;
     }
   if (t = __tag of IRI_ID)
